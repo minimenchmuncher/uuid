@@ -13,6 +13,8 @@ checkUUID <- function(object) {
         errors <- c(errors, msg)
     }
 
+    # TODO: this can sometimes fail unexpectedly. However, the likleyhood that anybody will
+    # want to create new objects starting with a binary representation is pretty small.
     # lengthRaw <- length(object@raw)
     # if (lengthRaw != 16) {
     #     msg <- sprintf("raw representation length must be 16 bytes, was %i", lengthRaw)
@@ -59,6 +61,11 @@ setMethod("initialize", "uuid", function(.Object, char_repr, raw, ..., use.time 
     }
     validObject(.Object)
     callNextMethod(.Object, ...)
+})
+
+#' @export
+setMethod("show", "uuid", function(object) {
+    cat(paste0("{", object@char_repr, "}"))
 })
 
 #' Convert raw 16-byte vector to UUID character representation

@@ -4,8 +4,10 @@ This is a package for supporting UUIDs in R. Please use with caution, this proje
 
 The main idea is the UUID should be an instance of an S4 class so it better mimics handling of UUIDs in other languages.
 
-##TODO:
+## TODO:
 - Allow creation of text-only uuids
-- Create a better `show` method
+- ~Create a `show` method~
 - Ensure uniqueness while generating lots of UUIDs simultaneously
 - Create a function that creates multiple UUIDs simultaneously
+- Create a `c()` method
+- create `as.character()` or similar

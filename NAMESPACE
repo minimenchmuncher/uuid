@@ -3,4 +3,5 @@
 export(uuid)
 exportClasses(uuid)
 exportMethods(initialize)
+exportMethods(show)
 useDynLib(uuid,UUID_gen)
