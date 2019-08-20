@@ -15,4 +15,3 @@ SEXP UUID_gen(SEXP sTime) {
     uuid_unparse_lower(u, c);
     return mkString(c);
 }
-

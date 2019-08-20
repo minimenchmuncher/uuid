@@ -33,7 +33,8 @@
  */
 
 #include <stdio.h>
-
+#include <R.h>
+#include <Rinternals.h>
 #include "uuidP.h"
 
 static const char *fmt_lower =
